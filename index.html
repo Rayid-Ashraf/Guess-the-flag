@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" class="w-full h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Flag</title>
+    <meta name="description" content="This website is a flag guessing game where a flag is displayed and users are prompted to choose the country it represents from a list of options. It provides a fun and educational way for visitors to test their knowledge of world flags and geography.">
+    <meta name="keywords" content="flags, quiz, game, world, geography">
+    <link rel="shortcut icon" href="./assets/icon.png" type="image/x-icon">
+    <link rel="apple-touch-icon" type="image/x-icon" href="./assets/icon.png" />
+
+
+    <link rel="stylesheet" href="./dist/output.css">
+    <script src="./script/index.js" defer></script>
+ 
+</head>  
+<body class="w-full h-full grid place-items-center" >
+   <main class="flex justify-center flex-col w-11/12 h-full py-5 max-w-[500px] sm:rounded-xl sm:box-shadow sm:px-5 sm:h-auto" id="main">
+    <div class="flex items-center justify-between mb-5"><h3>Score: <span id="score">0</span></h3><h3> <Span id="outof">0</Span>/10</h3></h3></div>
+    <div class="mb-5"><img id="flag" class="w-full h-[250px] sm:m-auto rounded-lg" alt="flag"></div>
+    <h1 class="mb-4">Guess the flag</h1>
+    <div class="flex flex-col items-center gap-2 mb-7 sm:grid sm:grid-cols-2">
+        <div onClick=handleClick(optionBoxes[0],option0) class="option"><h2 id="option-a"></h2></div>
+        <div onClick=handleClick(optionBoxes[1],option1) class="option"><h2 id="option-b"></h2></div>
+        <div onClick=handleClick(optionBoxes[2],option2) class="option"><h2 id="option-c"></h2></div>
+        <div onClick=handleClick(optionBoxes[3],option3) class="option"><h2 id="option-d"></h2></div>
+    </div>
+    <button class="d-button" id="button" disabled onclick="handleNext()" >Next</button>
+   </main>
+   <div class="grid place-items-center hidden" id="result">
+    <h4 class="mb-5" >You got <span id="result-score">0</span> out of 10 correct</h4>
+    <button class="button sm:w-72" onclick="location.reload()">Try again</button>
+    <h4 class="mt-5">High score: <span id="result-high-score">0</span></h4>
+   </div>
+</body>
+</html>
