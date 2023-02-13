@@ -10,7 +10,7 @@
     <meta name="keywords" content="flags, quiz, game, world, geography">
     <link rel="shortcut icon" href="./assets/icon.png" type="image/x-icon">
     <link rel="apple-touch-icon" type="image/x-icon" href="./assets/icon.png" />
-
+    <link rel="shortcut icon" href="./assets/icon.png" type="image/x-icon">
 
     <link rel="stylesheet" href="./dist/output.css">
     <script src="./script/index.js" defer></script>
@@ -22,10 +22,10 @@
     <div class="mb-5"><img id="flag" class="w-full h-[250px] sm:m-auto rounded-lg" alt="flag"></div>
     <h1 class="mb-4">Guess the flag</h1>
     <div class="flex flex-col items-center gap-2 mb-7 sm:grid sm:grid-cols-2">
-        <div onClick=handleClick(optionBoxes[0],option0) class="option"><h2 id="option-a"></h2></div>
-        <div onClick=handleClick(optionBoxes[1],option1) class="option"><h2 id="option-b"></h2></div>
-        <div onClick=handleClick(optionBoxes[2],option2) class="option"><h2 id="option-c"></h2></div>
-        <div onClick=handleClick(optionBoxes[3],option3) class="option"><h2 id="option-d"></h2></div>
+        <div onClick=handleClick(optionBoxes[0],option0) class="option"><h2 id="option-a">Loading...</h2></div>
+        <div onClick=handleClick(optionBoxes[1],option1) class="option"><h2 id="option-b">Loading...</h2></div>
+        <div onClick=handleClick(optionBoxes[2],option2) class="option"><h2 id="option-c">Loading...</h2></div>
+        <div onClick=handleClick(optionBoxes[3],option3) class="option"><h2 id="option-d">Loading...</h2></div>
     </div>
     <button class="d-button" id="button" disabled onclick="handleNext()" >Next</button>
    </main>
